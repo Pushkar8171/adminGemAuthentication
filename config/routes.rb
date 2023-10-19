@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  namespace :admin do
+      resources :articles
+      resources :blogs
+      resources :todos
+
+      root to: "articles#index"
+    end
   resources :todos
   resources :articles
   resources :blogs
